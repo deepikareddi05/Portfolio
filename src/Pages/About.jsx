@@ -123,14 +123,9 @@ const StatCard = memo(
   )
 );
 
-const AboutPage = () => {
-  // Memoized calculations
+const AboutPage = ({ projects = [], certificates = [] }) => {
+  // Memoized calculations (NOW using props instead of localStorage)
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(
-      localStorage.getItem("certificates") || "[]"
-    );
-
     const startDate = new Date("2021-11-06");
     const today = new Date();
     const experience =
@@ -142,11 +137,11 @@ const AboutPage = () => {
         : 0);
 
     return {
-      totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
+      totalProjects: Array.isArray(projects) ? projects.length : 0,
+      totalCertificates: Array.isArray(certificates) ? certificates.length : 0,
       YearExperience: experience,
     };
-  }, []);
+  }, [projects, certificates]);
 
   // Optimized AOS initialization
   useEffect(() => {
@@ -191,7 +186,6 @@ const AboutPage = () => {
         description: "Professional skills validated",
         animation: "fade-up",
       },
-      
     ],
     [totalProjects, totalCertificates]
   );
