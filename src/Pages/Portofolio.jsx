@@ -82,9 +82,9 @@ const techStacks = [
   { icon: "javascript.svg", language: "JavaScript" },
   { icon: "https://cdn-icons-png.flaticon.com/512/121/121152.png", language: "Java" },
   { icon: "vite.svg", language: "Python" },
-  { icon: "c.png", language: "C" },
-  { icon: "csharp.png", language: "C#" },
-  { icon: "mysql.png", language: "MySQL" },
+  { icon: "c.svg", language: "C" },
+  { icon: "csharp.svg", language: "C#" },
+  { icon: "mysql.svg", language: "MySQL" },
 ];
 
 // Main Component
