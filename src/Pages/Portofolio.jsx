@@ -83,7 +83,7 @@ const techStacks = [
   { icon: "https://cdn-icons-png.flaticon.com/512/121/121152.png", language: "Java" },
   { icon: "vite.svg", language: "Python" },
   { icon: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Fcanva-c-icon-in-2023--592927107209901500%2F&psig=AOvVaw0V6HZDAqSPspeU4QULFq_5&ust=1757084982297000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjb7uOxv48DFQAAAAAdAAAAABAE", language: "C" },
-  { icon: "download.jpg", language: "C#" },
+  { icon: "file.svg", language: "C#" },
   { icon: "https://www.google.com/imgres?q=mysq%3Bl%20small%20image%20with%20black%20background&imgurl=https%3A%2F%2Fcdn.intuji.com%2F2023%2F10%2FMySQL.png&imgrefurl=https%3A%2F%2Fintuji.com%2Fwhat-is-mysql-definition-comparision-with-sql-benefits-features-explained%2F&docid=KOBmR9c_luUOfM&tbnid=YJySbXoWbvPnFM&vet=12ahUKEwimpqDysb-PAxWI7zgGHZVYC5oQM3oECBcQAA..i&w=1890&h=1063&hcb=2&ved=2ahUKEwimpqDysb-PAxWI7zgGHZVYC5oQM3oECBcQAA", language: "MySQL" },
 ];
 
