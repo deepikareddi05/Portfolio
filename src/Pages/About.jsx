@@ -38,7 +38,6 @@ const Header = memo(() => (
 const ProfileImage = memo(() => (
   <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
     <div className="relative group" data-aos="fade-up" data-aos-duration="1000">
-      {/* Optimized gradient backgrounds with reduced complexity for mobile */}
       <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 rounded-full blur-2xl animate-spin-slower" />
         <div className="absolute inset-0 bg-gradient-to-l from-fuchsia-500 via-rose-500 to-pink-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
@@ -47,8 +46,6 @@ const ProfileImage = memo(() => (
       <div className="relative">
         <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
           <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
-
-          {/* Optimized overlay effects - disabled on mobile */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block" />
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
@@ -59,7 +56,6 @@ const ProfileImage = memo(() => (
             loading="lazy"
           />
 
-          {/* Advanced hover effects - desktop only */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-20 hidden sm:block">
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/10 to-transparent transform translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
@@ -124,7 +120,6 @@ const StatCard = memo(
 );
 
 const AboutPage = ({ projects = [], certificates = [] }) => {
-  // Memoized calculations (NOW using props instead of localStorage)
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     const startDate = new Date("2021-11-06");
     const today = new Date();
@@ -143,7 +138,6 @@ const AboutPage = ({ projects = [], certificates = [] }) => {
     };
   }, [projects, certificates]);
 
-  // Optimized AOS initialization
   useEffect(() => {
     const initAOS = () => {
       AOS.init({
@@ -153,7 +147,6 @@ const AboutPage = ({ projects = [], certificates = [] }) => {
 
     initAOS();
 
-    // Debounced resize handler
     let resizeTimer;
     const handleResize = () => {
       clearTimeout(resizeTimer);
@@ -167,7 +160,6 @@ const AboutPage = ({ projects = [], certificates = [] }) => {
     };
   }, []);
 
-  // Memoized stats data
   const statsData = useMemo(
     () => [
       {
@@ -222,9 +214,12 @@ const AboutPage = ({ projects = [], certificates = [] }) => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              Aspiring Computer Science and Systems Engineering graduate with a strong foundation in programming, data structures, and 
-software development. Passionate about leveraging technology to solve complex problems and drive innovation. Seeking an 
-opportunity to apply my skills in a dynamic organization that values hard work, responsibility, and growth. 
+              Aspiring Computer Science and Systems Engineering graduate with a
+              strong foundation in programming, data structures, and software
+              development. Passionate about leveraging technology to solve
+              complex problems and drive innovation. Seeking an opportunity to
+              apply my skills in a dynamic organization that values hard work,
+              responsibility, and growth.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
@@ -292,3 +287,5 @@ opportunity to apply my skills in a dynamic organization that values hard work, 
     </div>
   );
 };
+
+export default memo(AboutPage);
