@@ -84,7 +84,7 @@ const techStacks = [
   { icon: "vite.svg", language: "Python" },
   { icon: "download (1).svg", language: "C" },
   { icon: "csharp.svg", language: "C#" },
-  { icon: "download (2).svg", language: "MySQL" },
+  { icon: "mysql.svg", language: "MySQL" },
 ];
 
 // Main Component
